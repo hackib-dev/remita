@@ -133,11 +133,12 @@ const BankTransfer = () => {
     },
     onError(error: any) {
       console.error(error);
+
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
         description:
-          error?.response?.data?.description ||
+          error?.response?.data?.data?.message ||
           "An error occurred, please try again.",
       });
     },

@@ -60,7 +60,7 @@ const CheckStatus = () => {
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
         description:
-          error?.response?.data?.description ||
+          error?.response?.data?.data?.message ||
           "An error occurred, please try again.",
       });
       setStatus("");
